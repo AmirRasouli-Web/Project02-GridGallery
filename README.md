@@ -34,8 +34,4 @@ Best Regards 🙌🏼
 
 ## Feedback
 
-If you have any feedback, please reach out to us at AmirRasouli02@gmail.com)
-
-## Feedback
-
 If you have any feedback, please reach out to us at AmirRasouli02@gmail.com
