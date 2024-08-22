@@ -1,0 +1,282 @@
+.gridGallery{
+    width: 100%;
+    height: 351vh;
+    background: linear-gradient(45deg, #000000, #434343);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 47.5vh);
+    gap: 20px;
+    >figure{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 5px 4px black;
+        background-image: linear-gradient(45deg, #03001e, #7303c0, #00bbff, #1900ff, #b3dcfa);
+        border-radius: 5px;
+        transition: .4s;
+        animation: anime1 10s linear infinite;
+        overflow: hidden;
+        &:hover{
+            scale: 1.03;
+            box-shadow: 0 0 5px 4px white;
+            &::before{
+                top: 30px;
+                right: 30px;
+                border-color: white white transparent transparent;
+            }
+            &::after{
+                top: 30px;
+                left: 30px;
+                border-color: white transparent transparent white;
+            }
+            >div{
+                &:nth-of-type(1){
+                    bottom: 30px;
+                    right: 30px;
+                    border-color: transparent white white transparent;
+                }
+                &:nth-of-type(2){
+                    bottom: 30px;
+                    left: 30px;
+                    border-color: transparent transparent white white;
+                }
+            }
+            >img{
+                filter: grayscale(0) blur(0);
+            }
+            >figcaption{
+                width: 55%;
+                height: 15%;
+                >a{
+                    opacity: 1;
+                }
+            }
+        }
+        *{
+            transition: .4s;
+        }
+        &::after, &::before{
+            content: '';
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            border: 2px solid;
+            transition: .4s;
+        }
+        &::before{
+            top: 15px;
+            right: 15px;
+            border-color: rgb(95, 95, 95) rgb(95, 95, 95) transparent transparent;
+            z-index: 2;
+        }
+        &::after{
+            top: 15px;
+            left: 15px;
+            border-color: rgb(95, 95, 95) transparent transparent rgb(95, 95, 95);
+        }
+        >div{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px solid;
+            &:nth-of-type(1){
+                bottom: 15px;
+                right: 15px;
+                border-color: transparent rgb(95, 95, 95) rgb(95, 95, 95) transparent;
+            }
+            &:nth-of-type(2){
+                bottom: 15px;
+                left: 15px;
+                border-color: transparent transparent rgb(95, 95, 95) rgb(95, 95, 95);
+            }
+        }
+        >figcaption{
+            width: 0;
+            height: 2px;
+            overflow: hidden;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: linear-gradient( 109.6deg,  rgba(102,51,153,.7) 11.2%, rgba(2,0,4,.7) 91.1% );
+            border-radius: 5px;
+            transition-property: width, height;
+            transition-delay: .4s, .8s;
+            transition-duration: .4s, .4s;
+            >a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                padding-top: 7px;
+                text-decoration: none;
+                font-family: Timmana;
+                font-size: 120%;
+                color: rgb(255, 255, 255);
+                text-shadow: 0 0 3px black, 1px 1px 3px black, 2px 2px 3px black, 3px 3px 5px black, 4px 4px 3px black,5px 5px 3px black;
+                opacity: 0;
+                transition-property: opacity;
+                transition-delay: 1.2s;
+                transition-duration: .4s;
+            }
+        }
+        
+        &:nth-of-type(1){
+            grid-column: 1 / span 2;
+        }
+        &:nth-of-type(2){
+            >img{
+                object-position: top;
+            }
+        }
+        &:nth-of-type(4){
+            grid-area: 1 / 5 / span 2 / span 1;
+            >img{
+                object-position: 40% 0;
+            }
+        }
+        &:nth-of-type(5){
+            grid-column: 1 / span 2;
+        }
+        &:nth-of-type(7){
+            >img{
+                object-position: top;
+            }
+        }
+        &:nth-of-type(8){
+            grid-row: 3 / span 2;
+        }
+        &:nth-of-type(9){
+            >img{
+                object-position: top;  
+            }
+        }
+        &:nth-of-type(10){
+            grid-area: 3 / 3 / span 1 / span 2;
+            >img{
+                object-position: top;
+            }
+        }
+        &:nth-of-type(12){
+            grid-area: 4 / 2 / span 2 / span 1;
+        }
+        &:nth-of-type(14){
+            grid-area: 4 / 4 / span 2 / span 1;
+        }
+        &:nth-of-type(16){
+            >img{
+                object-position: 20%;
+            }
+        }
+        &:nth-of-type(17){
+            >img{
+                object-position: top;
+            }
+        }
+        &:nth-of-type(18){
+            >img{
+                object-position: 40%;
+            }
+        }
+        &:nth-of-type(19){
+            grid-area: 6 / 1 / span 2 / span 1;
+        }
+        &:nth-of-type(20){
+            grid-area: 6 / 2 / span 1 / span 2;
+            >img{
+                object-position: top;
+            }
+        }
+        &:nth-of-type(21){
+            grid-area: 6 / 4 / span 2 / span 2;
+            >figcaption{
+                top: 80%;
+                >a{
+                    font-size: 3rem;
+                }
+            }
+            >div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition-duration: .4s;
+                >a{
+                    color: unset;
+                    >i{
+                        font-size: 1rem;
+                        opacity: 0;
+                        color: transparent;
+                        background-image: linear-gradient( 109.6deg,  rgba(102,51,153) 11.2%, rgba(2,0,4) 91.1% );
+                        background-clip: text;
+                    }
+                }
+                &:nth-of-type(1){
+                    transition-delay: 1.2s;
+                    i{
+                        transition-delay: 1.2s;
+                    }
+                }
+                &:nth-of-type(2){
+                    transition-delay: .8s;
+                    i{
+                        transition-delay: .8s;
+                    }
+                }
+                &:nth-of-type(3){
+                    top: 15px;
+                    left: 15px;
+                    border: 2px solid;
+                    border-color: rgb(95, 95, 95) transparent transparent rgb(95, 95, 95);
+                    transition-delay: .4s;
+                    i{
+                        transition-delay: .4s;
+                    }
+                }
+                &:nth-of-type(4){
+                    top: 15px;
+                    right: 15px;
+                    border: 2px solid;
+                    border-color: rgb(95, 95, 95) rgb(95, 95, 95) transparent transparent;
+                }
+            }
+            &::before, &::after{
+                content: '';
+                display: none;
+            }
+            &:hover{
+                &::before, &::after{
+                    content: '';
+                    display: none;
+                }
+                >div{
+                    border: 2px solid transparent;
+                    >a{
+                        >i{
+                            font-size: 5rem;
+                            opacity: 1;
+                        }
+                    }
+                    &:nth-of-type(1){
+                        bottom: 25%;
+                        right: 35%;
+                    }
+                    &:nth-of-type(2){
+                        bottom: 25%;
+                        left: 35%;
+                    }
+                    &:nth-of-type(3){
+                        top: 55%;
+                        left: 35%;
+                    }
+                    &:nth-of-type(4){
+                        top: 55%;
+                        right: 35%;
+                    }
+                }
+            }
+        }
+    }
+}
